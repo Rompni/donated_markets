@@ -9,12 +9,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MarkerController {
+public class MarketController {
 
     private DBHandler db;
     private Context c;
 
-    public MarkerController(Context c) {
+    public MarketController(Context c) {
         this.db = new DBHandler(c);
         this.c = c;
     }
@@ -34,10 +34,10 @@ public class MarkerController {
             values.put(DefDB.KEY_MARKET_ID, market.getMarketID());
             values.put(DefDB.KEY_MARKET_NEIGHBORHOOD, market.getMarketNeighborhood());
             values.put(DefDB.KEY_MARKET_HOMEADDRESS, market.getMarketHomeAddress());
-            values.put(DefDB.KEY_MARKET_DATETIME, market.getMarketDatetime());
+            values.put(DefDB.KEY_MARKET_DATETIME, Integer.parseInt(market.getMarketDatetime()));
             values.put(DefDB.KEY_MARKET_PERSONRECEIVES, market.getMarketPersonReceives());
 
-            sql.insert(DefDB.TABLE_MARKETS, null, values);
+            long id =  sql.insert(DefDB.TABLE_MARKETS, null, values);
             sql.close();
             Toast.makeText(c, "market added " , Toast.LENGTH_LONG).show();
 
@@ -60,7 +60,7 @@ public class MarkerController {
                 null,
                 null);
 
-        if (cursor != null) {
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
 
             Market market = new Market(
@@ -90,7 +90,8 @@ public class MarkerController {
         Cursor cursor = sql.rawQuery(selectQuery, null);
 
         // Looping through all rows and adding to list
-        if (cursor.moveToFirst()) {
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
             do {
                 Market market = new Market(
                         cursor.getInt(0),
@@ -113,7 +114,8 @@ public class MarkerController {
         SQLiteDatabase sql = db.getWritableDatabase();
 
         Cursor cursor = sql.query(DefDB.TABLE_MARKETS,
-                new String[] { DefDB.KEY_MARKET_ID, DefDB.KEY_MARKET_NEIGHBORHOOD, DefDB.KEY_MARKET_HOMEADDRESS,DefDB.KEY_MARKET_DATETIME, DefDB.KEY_MARKET_PERSONRECEIVES },
+                new String[] { DefDB.KEY_MARKET_ID, DefDB.KEY_MARKET_NEIGHBORHOOD,
+                               DefDB.KEY_MARKET_HOMEADDRESS, "datetime("+DefDB.KEY_MARKET_DATETIME+ "", DefDB.KEY_MARKET_PERSONRECEIVES },
                 DefDB.KEY_MARKET_NEIGHBORHOOD+ "=?",
                 new String[] { String.valueOf(marketNeighborhood)},
                 null,

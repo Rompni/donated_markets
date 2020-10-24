@@ -2,11 +2,11 @@ package com.edu.unimagdalena.appmoviles.donated_markets;
 
 public class Market {
 
-    int marketID;
-    String marketNeighborhood;
-    String marketHomeAddress;
-    String marketDatetime;
-    String marketPersonReceives;
+    private int marketID;
+    private String marketNeighborhood;
+    private String marketHomeAddress;
+    private String marketDatetime;
+    private String marketPersonReceives;
 
     public Market(int marketID, String marketNeighborhood, String marketHomeAddress, String marketDatetime, String marketPersonReceives) {
         this.marketID = marketID;
