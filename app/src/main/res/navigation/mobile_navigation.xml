@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_add_donation">
+
+    <fragment
+        android:id="@+id/nav_add_donation"
+        android:name="com.edu.unimagdalena.appmoviles.donated_markets.ui.add_donation.AddDonationFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_add_donation" />
+
+    <fragment
+        android:id="@+id/nav_donation_list"
+        android:name="com.edu.unimagdalena.appmoviles.donated_markets.ui.donation_list.DonationListFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_donation_list" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.edu.unimagdalena.appmoviles.donated_markets.ui.logout.LogoutFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_logout" />
+</navigation>
