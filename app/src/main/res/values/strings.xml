@@ -14,5 +14,12 @@
     <string name="menu_home">Añadir Donación</string>
     <string name="menu_gallery">Lista de Donaciones</string>
     <string name="menu_slideshow">Cerrar Sesión</string>
+<<<<<<< HEAD
     <string name="neigh_find">Filtrar por Barrio</string>
+=======
+
+    <string name="user_shared_preferences">credentials</string>
+    <string name="key_username">username</string>
+    <string name="key_password">password</string>
+>>>>>>> 0e936657978e35ff5f8222a7ec36684b69f87881
 </resources>
