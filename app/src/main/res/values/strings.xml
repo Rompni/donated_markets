@@ -16,10 +16,20 @@
     <string name="menu_slideshow">Cerrar Sesión</string>
 
     <string name="neigh_find">Filtrar por Barrio</string>
-=======
+
+    <string name="NEIGHBORHOOD">Barrio</string>
+    <string name="HOMEADDRESS">Dirección</string>
+    <string name="PERSONRECEIVES">Persona beneficiada</string>
+    <string name="ID">Codigo del mercado</string>
+    <string name="guardar_donation_text">Guardar</string>
+
+
+    =======
 
     <string name="user_shared_preferences">credentials</string>
     <string name="key_username">username</string>
     <string name="key_password">password</string>
->>>>>>> 0e936657978e35ff5f8222a7ec36684b69f87881
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    >>>>>>> 0e936657978e35ff5f8222a7ec36684b69f87881
 </resources>

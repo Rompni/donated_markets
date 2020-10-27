@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +25,7 @@ public class MarketAdapter extends ArrayAdapter<Market> {
 
     private TextView neighborhood, homeaddress, person, code, date;
     private ArrayList<Market> markets, copyMarkets;
+    private LinearLayout containerBuy, containerButtons;
 
     public MarketAdapter(@NonNull Context context, @NonNull ArrayList<Market> objects) {
         super(context, 0, objects);
@@ -66,6 +69,7 @@ public class MarketAdapter extends ArrayAdapter<Market> {
         }
         return convertView;
     }
+
 
     public void filter(String text) {
         text = text.toLowerCase();
