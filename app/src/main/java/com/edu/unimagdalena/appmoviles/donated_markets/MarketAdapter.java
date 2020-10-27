@@ -7,14 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Filter;
-<<<<<<< HEAD
-import android.widget.Filterable;
-=======
->>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,18 +19,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
-<<<<<<< HEAD
-public class MarketAdapter extends ArrayAdapter<Market> implements Filterable {
 
-    private TextView neighborhood, homeaddress, person, code, date;
-    private ArrayList<Market> markets, copyMarkets;
-=======
 public class MarketAdapter extends ArrayAdapter<Market> {
 
     private TextView neighborhood, homeaddress, person, code, date;
     private ArrayList<Market> markets, copyMarkets;
-    private LinearLayout containerBuy, containerButtons;
->>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 
     public MarketAdapter(@NonNull Context context, @NonNull ArrayList<Market> objects) {
         super(context, 0, objects);
@@ -83,11 +70,7 @@ public class MarketAdapter extends ArrayAdapter<Market> {
 
 
     public void filter(String text) {
-<<<<<<< HEAD
-        text = text.toUpperCase();
-=======
         text = text.toLowerCase();
->>>>>>> da7353bcc5109224574869253796c648cdf5cadf
         markets.clear();
 
         if (text.length() == 0) {
@@ -95,19 +78,11 @@ public class MarketAdapter extends ArrayAdapter<Market> {
         } else {
 
             for (Market m : copyMarkets) {
-<<<<<<< HEAD
-                if (m.getMarketNeighborhood().toUpperCase().contains(text)) {
-=======
                 if (m.getMarketNeighborhood().toLowerCase().contains(text)) {
->>>>>>> da7353bcc5109224574869253796c648cdf5cadf
                     markets.add(m);
                 }
             }
         }
         notifyDataSetChanged();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 }
