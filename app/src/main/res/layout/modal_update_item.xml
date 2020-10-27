@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="30dp">
+
+
+    <EditText
+        android:id="@+id/NEIGHBORHOOD_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="@string/NEIGHBORHOOD"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/HOMEADDRESS_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="@string/HOMEADDRESS"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NEIGHBORHOOD_edit" />
+
+    <EditText
+        android:id="@+id/PERSONRECEIVES_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="@string/PERSONRECEIVES"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HOMEADDRESS_edit" />
+
+    <EditText
+        android:id="@+id/ID_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="@string/ID"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PERSONRECEIVES_edit" />
+
+    <Button
+        android:id="@+id/donation_button_edit"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:text="@string/guardar_donation_text"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID_edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

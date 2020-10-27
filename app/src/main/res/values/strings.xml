@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Mercados Donados</string>
+    <string name="pass_text">Contraseña</string>
+    <string name="user_text">Usuario</string>
+    <string name="login_text">Iniciar Sesión</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Nombre Usuario</string>
+    <string name="nav_header_subtitle">Usuario</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Añadir Donación</string>
+    <string name="menu_gallery">Lista de Donaciones</string>
+    <string name="menu_slideshow">Cerrar Sesión</string>
+
+    <string name="neigh_find">Filtrar por Barrio</string>
+
+    <string name="NEIGHBORHOOD">Barrio</string>
+    <string name="HOMEADDRESS">Dirección</string>
+    <string name="PERSONRECEIVES">Persona beneficiada</string>
+    <string name="ID">Codigo del mercado</string>
+    <string name="guardar_donation_text">Guardar</string>
+
+
+    =======
+
+    <string name="user_shared_preferences">credentials</string>
+    <string name="key_username">username</string>
+    <string name="key_password">password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    >>>>>>> 0e936657978e35ff5f8222a7ec36684b69f87881
+</resources>
