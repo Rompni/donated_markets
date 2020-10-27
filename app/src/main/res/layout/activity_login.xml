@@ -8,13 +8,14 @@
     tools:context=".LoginActivity">
 
   <EditText
-      android:id="@+id/editTextTextPersonName"
+      android:id="@+id/editTextUser"
       android:layout_width="300dp"
       android:layout_height="50dp"
       android:layout_marginTop="60dp"
       android:background="@drawable/input_field"
       android:ems="10"
       android:hint="@string/user_text"
+      android:text="usuario"
       android:inputType="textPersonName"
       android:textColorHint="@color/gray"
       app:layout_constraintEnd_toEndOf="parent"
@@ -23,19 +24,19 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <EditText
-      android:id="@+id/editTextTextPersonName2"
+      android:id="@+id/editTextPassword"
       android:layout_width="300dp"
       android:layout_height="50dp"
       android:background="@drawable/input_field"
       android:textColorHint="@color/gray"
       android:layout_marginTop="28dp"
       android:ems="10"
-      android:inputType="textPersonName"
+      android:inputType="textPassword"
       android:hint="@string/pass_text"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.497"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+      app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
 
   <Button
       android:id="@+id/login_button"
@@ -48,5 +49,5 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.498"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+      app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>

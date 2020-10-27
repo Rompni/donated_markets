@@ -14,4 +14,8 @@
     <string name="menu_home">Añadir Donación</string>
     <string name="menu_gallery">Lista de Donaciones</string>
     <string name="menu_slideshow">Cerrar Sesión</string>
+
+    <string name="user_shared_preferences">credentials</string>
+    <string name="key_username">username</string>
+    <string name="key_password">password</string>
 </resources>
