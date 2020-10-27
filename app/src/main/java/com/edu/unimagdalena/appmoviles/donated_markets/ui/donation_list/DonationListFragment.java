@@ -2,6 +2,10 @@ package com.edu.unimagdalena.appmoviles.donated_markets.ui.donation_list;
 
 import android.app.AlertDialog;
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.content.Intent;
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,6 +15,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
+=======
+import android.widget.LinearLayout;
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,27 +26,47 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+<<<<<<< HEAD
+=======
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 
 import com.edu.unimagdalena.appmoviles.donated_markets.Market;
 import com.edu.unimagdalena.appmoviles.donated_markets.MarketAdapter;
 import com.edu.unimagdalena.appmoviles.donated_markets.MarketController;
 import com.edu.unimagdalena.appmoviles.donated_markets.R;
+<<<<<<< HEAD
+=======
+import com.edu.unimagdalena.appmoviles.donated_markets.ui.add_donation.AddDonationFragment;
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+<<<<<<< HEAD
+=======
+import java.util.Locale;
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
 
 public class DonationListFragment extends Fragment {
 
     ListView mklist;
     MarketController mc;
     ArrayList<Market> arrayOfMarkets;
+<<<<<<< HEAD
     MarketAdapter adapter;
     EditText search;
     Context c;
 
 
+=======
+    EditText search;
+    Market m;
+    Context c;
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_donation_list, container, false);
@@ -50,6 +78,7 @@ public class DonationListFragment extends Fragment {
 
         c = view.getContext();
         mc = new MarketController(c);
+<<<<<<< HEAD
 
         arrayOfMarkets= new ArrayList<>(mc.getAllMarkets());
         adapter = new MarketAdapter(c, arrayOfMarkets);
@@ -76,6 +105,21 @@ public class DonationListFragment extends Fragment {
         });
 
 
+=======
+        long time = System.currentTimeMillis();
+
+        m = new Market(500, "Santa Cruz", "Calle 47B",
+                time, "Julio Mario");
+
+        if (mc.getMarket(m.getMarketID()) == null)
+            mc.addMarket(m);
+
+        arrayOfMarkets= new ArrayList<>(mc.getAllMarkets());
+        final MarketAdapter adapter = new MarketAdapter(c, arrayOfMarkets);
+        mklist = view.findViewById(R.id.marketList);
+        mklist.setAdapter(adapter);
+
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
         mklist.setClickable(true);
         mklist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -99,7 +143,27 @@ public class DonationListFragment extends Fragment {
             }
         });
 
+<<<<<<< HEAD
 
+=======
+        search = view.findViewById(R.id.neighborhood_find);
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String text = search.getText().toString();
+                adapter.filter(text);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
     }
 
     private void mostrarDialogoPersonalizado(final Market market){
@@ -148,7 +212,10 @@ public class DonationListFragment extends Fragment {
             public void onClick(View view) {
                 dialog.dismiss();
                 modalUpdate(market);
+<<<<<<< HEAD
 
+=======
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
             }
         });
 
@@ -157,9 +224,14 @@ public class DonationListFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 mc.deleteMarket(market);
+<<<<<<< HEAD
                 adapter.notifyDataSetChanged();
                 arrayOfMarkets= new ArrayList<>(mc.getAllMarkets());
                 adapter = new MarketAdapter(c, arrayOfMarkets);
+=======
+                arrayOfMarkets= new ArrayList<>(mc.getAllMarkets());
+                final MarketAdapter adapter = new MarketAdapter(c, arrayOfMarkets);
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
                 mklist.setAdapter(adapter);
                 dialog.dismiss();
             }
@@ -207,11 +279,17 @@ public class DonationListFragment extends Fragment {
                             homeAddress.getText().toString(), time,
                             personReceives.getText().toString());
                     mc.updateMarket(marketEdit);
+<<<<<<< HEAD
                     adapter.notifyDataSetChanged();
                     arrayOfMarkets= new ArrayList<>(mc.getAllMarkets());
                     adapter = new MarketAdapter(c, arrayOfMarkets);
                     mklist.setAdapter(adapter);
 
+=======
+                    arrayOfMarkets= new ArrayList<>(mc.getAllMarkets());
+                    final MarketAdapter adapter = new MarketAdapter(c, arrayOfMarkets);
+                    mklist.setAdapter(adapter);
+>>>>>>> da7353bcc5109224574869253796c648cdf5cadf
                     dialog.dismiss();
                 }
             }
