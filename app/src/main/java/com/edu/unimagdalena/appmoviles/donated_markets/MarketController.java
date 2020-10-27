@@ -34,7 +34,7 @@ public class MarketController {
             values.put(DefDB.KEY_MARKET_ID, market.getMarketID());
             values.put(DefDB.KEY_MARKET_NEIGHBORHOOD, market.getMarketNeighborhood());
             values.put(DefDB.KEY_MARKET_HOMEADDRESS, market.getMarketHomeAddress());
-            values.put(DefDB.KEY_MARKET_DATETIME, Integer.parseInt(market.getMarketDatetime()));
+            values.put(DefDB.KEY_MARKET_DATETIME, market.getMarketDatetime());
             values.put(DefDB.KEY_MARKET_PERSONRECEIVES, market.getMarketPersonReceives());
 
             long id =  sql.insert(DefDB.TABLE_MARKETS, null, values);
@@ -67,7 +67,7 @@ public class MarketController {
                     Integer.parseInt(cursor.getString(0)),
                     cursor.getString(1),
                     cursor.getString(2),
-                    cursor.getString(3),
+                    Long.parseLong(cursor.getString(3)),
                     cursor.getString(4));
 
             //Return Student
@@ -97,7 +97,7 @@ public class MarketController {
                         cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getString(2),
-                        cursor.getString(3),
+                        Long.parseLong( cursor.getString(3)),
                         cursor.getString(4));
 
                 marketList.add(market);
@@ -130,7 +130,7 @@ public class MarketController {
                         cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getString(2),
-                        cursor.getString(3),
+                        Long.parseLong(cursor.getString(3)),
                         cursor.getString(4));
 
                 marketList.add(market);

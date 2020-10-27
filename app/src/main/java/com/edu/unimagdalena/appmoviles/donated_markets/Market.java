@@ -5,10 +5,10 @@ public class Market {
     private int marketID;
     private String marketNeighborhood;
     private String marketHomeAddress;
-    private String marketDatetime;
+    private long marketDatetime;
     private String marketPersonReceives;
 
-    public Market(int marketID, String marketNeighborhood, String marketHomeAddress, String marketDatetime, String marketPersonReceives) {
+    public Market(int marketID, String marketNeighborhood, String marketHomeAddress, long marketDatetime, String marketPersonReceives) {
         this.marketID = marketID;
         this.marketNeighborhood = marketNeighborhood;
         this.marketHomeAddress = marketHomeAddress;
@@ -40,11 +40,11 @@ public class Market {
         this.marketHomeAddress = marketHomeAddress;
     }
 
-    public String getMarketDatetime() {
+    public long getMarketDatetime() {
         return marketDatetime;
     }
 
-    public void setMarketDatetime(String marketDatetime) {
+    public void setMarketDatetime(long marketDatetime) {
         this.marketDatetime = marketDatetime;
     }
 

@@ -40,24 +40,20 @@ public class DonationListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //final TextView textView = view.findViewById(R.id.text_gallery);
-        //textView.setText("Lista de Donaciones");
+
         c = view.getContext();
         mc = new MarketController(c);
-        m = new Market(100, "Santa Cruz", "Calle 47B",
-                "1081126732", "Julio Mario");
+        long time = System.currentTimeMillis();
 
-        mc.addMarket(new Market(200, "Santa Cruz X", "Calle 47B",
-                "1081126732", "Julio Mario"));
+        m = new Market(500, "Santa Cruz", "Calle 47B",
+                time, "Julio Mario");
 
-        mc.addMarket(new Market(300, "Santa Ana", "Calle 47B",
-                "1081126732", "Julio Mario"));
         if (mc.getMarket(m.getMarketID()) == null)
             mc.addMarket(m);
 
         arrayOfMarkets= new ArrayList<>(mc.getAllMarkets());
         final MarketAdapter adapter = new MarketAdapter(c, arrayOfMarkets);
-        mklist = (ListView) view.findViewById(R.id.marketList);
+        mklist = view.findViewById(R.id.marketList);
         mklist.setAdapter(adapter);
 
         search = view.findViewById(R.id.neighborhood_find);

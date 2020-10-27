@@ -54,8 +54,8 @@ public class MarketAdapter extends ArrayAdapter<Market> {
                 person.setText(m.getMarketPersonReceives());
                 code.setText(String.valueOf(m.getMarketID()));
 
-                long timestamp = Long.parseLong(m.getMarketDatetime());
-                Date expiry = new Date(timestamp * 1000L);
+                long timestamp = m.getMarketDatetime();
+                Date expiry = new Date(timestamp);
                 @SuppressLint("SimpleDateFormat") SimpleDateFormat jdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ");
 
                 date.setText(jdf.format(expiry));

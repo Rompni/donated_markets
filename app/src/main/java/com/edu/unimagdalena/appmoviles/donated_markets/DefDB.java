@@ -20,7 +20,7 @@ public class DefDB {
             + KEY_MARKET_ID + " INTEGER (10) PRIMARY KEY, "
             + KEY_MARKET_NEIGHBORHOOD+ " TEXT, "
             + KEY_MARKET_HOMEADDRESS + " TEXT,"
-            + KEY_MARKET_DATETIME + " INTEGER,"
+            + KEY_MARKET_DATETIME + " LONG,"
             + KEY_MARKET_PERSONRECEIVES + " TEXT"
             + ")";
 }
