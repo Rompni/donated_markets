@@ -15,7 +15,6 @@
       android:background="@drawable/input_field"
       android:ems="10"
       android:hint="@string/user_text"
-      android:text="usuario"
       android:inputType="textPersonName"
       android:textColorHint="@color/gray"
       app:layout_constraintEnd_toEndOf="parent"
